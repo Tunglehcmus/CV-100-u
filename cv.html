@@ -112,9 +112,10 @@
 
     .profile-photo {
       width: 170px;
-      height: 200px;
-      background: linear-gradient(135deg, #555, #2a2a2a);
-      filter: grayscale(100%);
+      height: 220px;
+      background: url('H1.jpg') center/cover no-repeat;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
     }
 
     /* ===== SECTIONS ===== */
@@ -236,13 +237,57 @@
       line-height: 1.55;
     }
 
+    .work-meta {
+      font-size: 8pt;
+      color: #f5a524;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .work-company {
+      font-size: 8.5pt;
+      color: #d4d4d4;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    .work-section-label {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 6px;
+      margin-bottom: 3px;
+      letter-spacing: 0.3px;
+    }
+
+    .work-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .work-bullets li {
+      font-size: 8pt;
+      color: #d4d4d4;
+      line-height: 1.5;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+
+    .work-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #f5a524;
+    }
+
     /* ARROW BOTTOM */
     .arrow-corner {
-      position: absolute;
-      bottom: 18mm;
-      left: 16mm;
       font-size: 24pt;
       font-weight: 300;
+      text-align: left;
+      margin-top: 20px;
     }
 
     @media print {
@@ -265,21 +310,22 @@
     <div class="top-bar">
       <div class="top-item">
         <div class="label">PHONE</div>
-        <div class="value">0918180394</div>
+        <div class="value">0918.18.03.94</div>
       </div>
       <div class="top-item">
         <div class="label">ADDRESS</div>
-        <div class="value">123 Anywhere St., Any City</div>
+        <div class="value">Ho Chi Minh City, Vietnam</div>
       </div>
       <div class="top-item">
         <div class="label">EMAIL</div>
-        <div class="value">hello@reallygreatsite.com</div>
+        <div class="value">Nguyenhoamaipt@gmail.com</div>
       </div>
     </div>
 
     <!-- NAME -->
     <div class="name-block">
-      <div class="name">RIAAN CHANDRAN</div>
+      <div class="name">NGUYEN HOA MAI <span style="font-weight:400;font-size:20pt;color:#f5a524;">(MIA)</span></div>
+      <div style="font-size:10pt;letter-spacing:2px;color:#d4d4d4;margin-top:8px;">HEAD OF MARKETING</div>
     </div>
 
     <!-- PROFILE SUMMARY (HERO) -->
@@ -287,12 +333,14 @@
       <div class="profile-info">
         <span class="profile-tag">PROFILE SUMMARY</span>
         <div class="profile-headline">
-          Crafting intuitive digital experiences with a passion for user-centered design.
+          I lead marketing with one clear goal: driving revenue growth.
         </div>
         <div class="profile-summary-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
+          With 9+ years in retail and trade marketing, my experience centers on connecting Sales and Marketing to deliver
+          real business results, especially in fast-moving, promotion-driven environments. This includes building scalable
+          marketing frameworks — from trade promotion to omni-channel execution — ensuring consistency from planning to
+          in-market delivery. I'm particularly interested in roles where marketing is expected to directly drive business
+          performance, not just brand visibility.
         </div>
       </div>
       <div class="profile-photo"></div>
@@ -303,10 +351,12 @@
       <div class="section-label">SKILLS</div>
       <div class="section-body">
         <div class="skills">
-          <span class="skill-tag filled">Typography</span>
-          <span class="skill-tag">Communication</span>
-          <span class="skill-tag">Visual Imagination</span>
-          <span class="skill-tag">User Research</span>
+          <span class="skill-tag filled">Brand &amp; Commercial Strategy</span>
+          <span class="skill-tag">Integrated Marketing &amp; Omnichannel Execution</span>
+          <span class="skill-tag">Data-Driven Marketing &amp; Performance Optimization</span>
+          <span class="skill-tag">Consumer Insight &amp; Behavior Analysis</span>
+          <span class="skill-tag">Stakeholder &amp; Partner Management</span>
+          <span class="skill-tag">Marketing Operations &amp; Process Excellence</span>
         </div>
       </div>
     </div>
@@ -315,27 +365,132 @@
     <div class="section">
       <div class="section-label">WORK<br>EXPERIENCE</div>
       <div class="section-body">
+
+        <!-- Job 1 -->
         <div class="work-item">
-          <div class="work-title">AWARDIERE INC. — UX/UI DESIGNER [NOW - 2023]</div>
-          <div class="work-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          </div>
+          <div class="work-meta">JAN 2023 — PRESENT</div>
+          <div class="work-title">HEAD OF MARKETING</div>
+          <div class="work-company">Phong Vu Trading - Service Corporation | HCMC</div>
+
+          <div class="work-section-label">Scope of Work</div>
+          <ul class="work-bullets">
+            <li>Own end-to-end marketing performance, from brand building to revenue contribution.</li>
+            <li>Lead marketing strategy across 36+ retail stores and omni-channel ecosystem.</li>
+            <li>Manage annual marketing budget of ~20B VND with strong focus on efficiency and ROI.</li>
+            <li>Lead and develop a team of 48 across Planning, Trade, Digital, Media, and Creative.</li>
+            <li>Partner with Sales and Category teams to align marketing with revenue targets.</li>
+          </ul>
+
+          <div class="work-section-label">Key Responsibilities &amp; Contributions</div>
+          <ul class="work-bullets">
+            <li>Build annual marketing roadmap, defining commercial moments, campaign priorities, and channel roles.</li>
+            <li>Lead integrated campaigns across digital, retail, and offline touchpoints.</li>
+            <li>Develop and optimize owned channels (web, app, social), improving traffic and conversion.</li>
+            <li>Design promotion mechanics that drive sell-out while balancing margin and competitiveness.</li>
+            <li>Establish cross-functional workflows with internal teams and partners for execution at scale.</li>
+          </ul>
+
+          <div class="work-section-label">Results</div>
+          <ul class="work-bullets">
+            <li>Drove +23% revenue YoY at ~3.5% cost/GMV; marketing contributed ~40% of total company revenue.</li>
+            <li>Scaled owned ecosystem (Web &amp; App) to ~4.76M users (+32.5%).</li>
+            <li>Expanded organic traffic via SEO to ~4.9M visits/month (+58%).</li>
+            <li>&gt;80% campaigns met KPI; high-impact delivery across channels.</li>
+            <li><b>Z-Tech Unite</b> (Back to School): 15,000 attendees · &gt;1.5B VND revenue · 0 marketing cost.</li>
+            <li><b>Mega Tech Fest</b> (Birthday): 5,000 attendees · 2.8B VND revenue · 0 marketing cost.</li>
+          </ul>
         </div>
+
+        <!-- Job 2 -->
         <div class="work-item">
-          <div class="work-title">SALFORD &amp; CO. — UX/UI DESIGNER [2023 - 2021]</div>
-          <div class="work-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          </div>
+          <div class="work-meta">APR 2020 — DEC 2022</div>
+          <div class="work-title">TRADE MARKETING MANAGER</div>
+          <div class="work-company">Phong Vu Trading - Service Corporation | HCMC</div>
+
+          <div class="work-section-label">Scope of Work</div>
+          <ul class="work-bullets">
+            <li>Drive category growth through data-driven commercial strategy and promotion design.</li>
+            <li>Strategic partner to Category Directors on channel strategy, pricing, promotion frameworks.</li>
+            <li>Own market intelligence and partner ecosystem to unlock investment and insights.</li>
+            <li>Bridge Marketing, Sales, and Operations to ensure aligned, executable strategies.</li>
+          </ul>
+
+          <div class="work-section-label">Key Responsibilities &amp; Contributions</div>
+          <ul class="work-bullets">
+            <li>Analyze sales and channel data to identify growth drivers and gaps by category.</li>
+            <li>Define promotion strategy by channel: allocation logic, timing, and channel role.</li>
+            <li>Redesign promotion mechanics from discount-led to bundle and value-driven approaches.</li>
+            <li>Advise Category Directors on pricing, assortment, and campaign structure.</li>
+            <li>Build relationships with brands and distributors to secure co-marketing and trade support.</li>
+            <li>Translate business needs into system and process improvements with Dev teams.</li>
+          </ul>
+
+          <div class="work-section-label">Results</div>
+          <ul class="work-bullets">
+            <li>Secured ≥10B VND/year in partner investment, with consistent YoY growth.</li>
+            <li>Maintained all campaigns above minimum profitability thresholds — improved margin control.</li>
+            <li>Enabled faster, more consistent execution via standardized trade frameworks and system support.</li>
+          </ul>
         </div>
+
+        <!-- Job 3 -->
         <div class="work-item">
-          <div class="work-title">INGOUDE COMPANY — UX/UI DESIGNER [2021 - 2018]</div>
-          <div class="work-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          </div>
+          <div class="work-meta">JUN 2019 — MAR 2020</div>
+          <div class="work-title">ECOMMERCE MARKETING &amp; OPERATION LEADER</div>
+          <div class="work-company">Umbala Media Co., Ltd</div>
+
+          <div class="work-section-label">Scope of Work</div>
+          <ul class="work-bullets">
+            <li>Drive ecommerce growth across traffic, conversion, and GMV.</li>
+            <li>Lead performance marketing and optimize customer acquisition efficiency.</li>
+            <li>Align Marketing, Product, and Operations to support scalable platform growth.</li>
+          </ul>
+
+          <div class="work-section-label">Key Responsibilities &amp; Contributions</div>
+          <ul class="work-bullets">
+            <li>Execute performance marketing across paid, social, and affiliate channels.</li>
+            <li>Optimize acquisition funnel to improve conversion and cost efficiency.</li>
+            <li>Manage merchant onboarding and performance for operational stability.</li>
+            <li>Collaborate with Product to enhance user journey and platform experience.</li>
+          </ul>
+
+          <div class="work-section-label">Results</div>
+          <ul class="work-bullets">
+            <li>Grew traffic and GMV through multi-channel acquisition and funnel optimization.</li>
+            <li>Improved conversion and cost efficiency through data-driven campaign optimization.</li>
+          </ul>
         </div>
+
+        <!-- Job 4 -->
+        <div class="work-item">
+          <div class="work-meta">JAN 2016 — MAY 2019</div>
+          <div class="work-title">MARKETING &amp; OPERATION SUPERVISOR</div>
+          <div class="work-company">Foody.vn JSC (Shopee Food)</div>
+
+          <div class="work-section-label">Scope of Work</div>
+          <ul class="work-bullets">
+            <li>Support platform growth via marketing execution and merchant operations.</li>
+            <li>Ensure stable supply/demand performance during rapid expansion phase.</li>
+            <li>Coordinate cross-functional teams for consistent and timely campaign execution.</li>
+          </ul>
+
+          <div class="work-section-label">Key Responsibilities &amp; Contributions</div>
+          <ul class="work-bullets">
+            <li>Execute marketing campaigns across app, web, and social to drive acquisition and engagement.</li>
+            <li>Manage performance and operations of 8,000+ merchant partners.</li>
+            <li>Collaborate with Product to improve user experience and features.</li>
+            <li>Coordinate with Customer Service, BD, and Marketing teams for smooth execution.</li>
+            <li>Develop content and campaign assets to support reach and engagement.</li>
+          </ul>
+
+          <div class="work-section-label">Results</div>
+          <ul class="work-bullets">
+            <li>Achieved full-year KPI within first 4 months — accelerated business performance ahead of plan.</li>
+            <li>Stabilized operations for 8,000+ merchants during rapid scaling phase.</li>
+            <li>Delivered high-performing campaigns including content reaching 1M+ views.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
@@ -343,20 +498,12 @@
     <div class="section">
       <div class="section-label">EDUCATION</div>
       <div class="section-body">
-        <div class="edu-item">
-          <span class="edu-date">[ 2024 - 2027 ]</span>
+        <div class="edu-item" style="grid-template-columns: 110px 30px 1fr;">
+          <span class="edu-date">[ 2013 - 2017 ]</span>
           <span class="edu-arrow">→</span>
-          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
-        </div>
-        <div class="edu-item">
-          <span class="edu-date">[ 2023 - 2021 ]</span>
-          <span class="edu-arrow">→</span>
-          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
-        </div>
-        <div class="edu-item">
-          <span class="edu-date">[ 2018 - 2021 ]</span>
-          <span class="edu-arrow">→</span>
-          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
+          <span class="edu-school">UNIVERSITY OF LANGUAGES AND INTERNATIONAL STUDIES<br>
+            <span style="font-weight:400;color:#d4d4d4;">Vietnam National University · Bachelor's degree, Faculty of English · Grade: Credit</span>
+          </span>
         </div>
       </div>
     </div>
