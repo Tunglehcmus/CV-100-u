@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Riaan Chandran</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #0e0e0e;
+      padding: 18mm 16mm;
+      color: #fff;
+      position: relative;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, .5);
+    }
+
+    /* ===== TOP CONTACT BAR ===== */
+    .top-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .top-item .label {
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .top-item .value {
+      font-size: 8.5pt;
+      color: #ccc;
+      font-weight: 300;
+    }
+
+    .top-item .value::before {
+      content: '◉ ';
+      color: #fff;
+      margin-right: 4px;
+    }
+
+    /* ===== NAME BLOCK ===== */
+    .name-block {
+      padding: 22px 0 14px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .name {
+      font-size: 32pt;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+
+    /* ===== PROFILE SUMMARY (HERO) ===== */
+    .profile-hero {
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 24px;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 1px solid #fff;
+    }
+
+    .profile-tag {
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f5a524;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .profile-headline {
+      font-size: 14pt;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .profile-summary-text {
+      font-size: 8.5pt;
+      color: #d4d4d4;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 200px;
+      background: linear-gradient(135deg, #555, #2a2a2a);
+      filter: grayscale(100%);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 10px;
+      padding: 16px 0;
+      border-bottom: 1px solid #fff;
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f5a524;
+    }
+
+    .section-body {
+      padding-right: 10px;
+    }
+
+    /* ABOUT ME */
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 8.5pt;
+      color: #d4d4d4;
+      text-align: justify;
+      line-height: 1.55;
+    }
+
+    .photo {
+      width: 150px;
+      height: 175px;
+      background: linear-gradient(135deg, #555, #2a2a2a);
+      object-fit: cover;
+      filter: grayscale(100%);
+      display: block;
+    }
+
+    /* EDUCATION */
+    .edu-item {
+      display: grid;
+      grid-template-columns: 90px 30px 1fr;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 8.5pt;
+    }
+
+    .edu-date {
+      color: #ccc;
+    }
+
+    .edu-arrow {
+      color: #fff;
+      text-align: center;
+    }
+
+    .edu-school {
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: 8pt;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      border: 1px solid #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 8.5pt;
+      font-weight: 400;
+    }
+
+    .skill-tag.filled {
+      background: #fff;
+      color: #0e0e0e;
+    }
+
+    /* WORK */
+    .work-item {
+      margin-bottom: 14px;
+    }
+
+    .work-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .work-desc {
+      font-size: 8.5pt;
+      color: #d4d4d4;
+      text-align: justify;
+      line-height: 1.55;
+    }
+
+    /* ARROW BOTTOM */
+    .arrow-corner {
+      position: absolute;
+      bottom: 18mm;
+      left: 16mm;
+      font-size: 24pt;
+      font-weight: 300;
+    }
+
+    @media print {
+      body {
+        background: #0e0e0e;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- TOP CONTACT -->
+    <div class="top-bar">
+      <div class="top-item">
+        <div class="label">PHONE</div>
+        <div class="value">0918180394</div>
+      </div>
+      <div class="top-item">
+        <div class="label">ADDRESS</div>
+        <div class="value">123 Anywhere St., Any City</div>
+      </div>
+      <div class="top-item">
+        <div class="label">EMAIL</div>
+        <div class="value">hello@reallygreatsite.com</div>
+      </div>
+    </div>
+
+    <!-- NAME -->
+    <div class="name-block">
+      <div class="name">RIAAN CHANDRAN</div>
+    </div>
+
+    <!-- PROFILE SUMMARY (HERO) -->
+    <div class="profile-hero">
+      <div class="profile-info">
+        <span class="profile-tag">PROFILE SUMMARY</span>
+        <div class="profile-headline">
+          Crafting intuitive digital experiences with a passion for user-centered design.
+        </div>
+        <div class="profile-summary-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </div>
+      </div>
+      <div class="profile-photo"></div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-label">SKILLS</div>
+      <div class="section-body">
+        <div class="skills">
+          <span class="skill-tag filled">Typography</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Visual Imagination</span>
+          <span class="skill-tag">User Research</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+      <div class="section-label">WORK<br>EXPERIENCE</div>
+      <div class="section-body">
+        <div class="work-item">
+          <div class="work-title">AWARDIERE INC. — UX/UI DESIGNER [NOW - 2023]</div>
+          <div class="work-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-title">SALFORD &amp; CO. — UX/UI DESIGNER [2023 - 2021]</div>
+          <div class="work-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-title">INGOUDE COMPANY — UX/UI DESIGNER [2021 - 2018]</div>
+          <div class="work-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-label">EDUCATION</div>
+      <div class="section-body">
+        <div class="edu-item">
+          <span class="edu-date">[ 2024 - 2027 ]</span>
+          <span class="edu-arrow">→</span>
+          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-date">[ 2023 - 2021 ]</span>
+          <span class="edu-arrow">→</span>
+          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-date">[ 2018 - 2021 ]</span>
+          <span class="edu-arrow">→</span>
+          <span class="edu-school">RIMBERIO<br>UNIVERSITY</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM ARROW -->
+    <div class="arrow-corner">↗</div>
+
+  </div>
+</body>
+
+</html>
